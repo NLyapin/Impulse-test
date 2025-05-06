@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/nikitalapin/Downloads/test_task_impulse/output/test'
+relocations:     []
+...
