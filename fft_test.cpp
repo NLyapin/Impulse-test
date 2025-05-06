@@ -55,5 +55,16 @@ int main() {
                   << "(" << sample.real() << ", " << sample.imag() << "i)\n";
     }
 
+    // Расчет среднеквадратичной ошибки
+    double mse = 0.0;
+    for (int i = 0; i < length; ++i) {
+        double real_diff = signal[i].real() - restored[i].real();
+        double imag_diff = signal[i].imag() - restored[i].imag();
+        mse += real_diff * real_diff + imag_diff * imag_diff;
+    }
+    mse /= length;
+
+    std::cout << "\nСреднеквадратичная ошибка (MSE): " << std::scientific << mse << "\n";
+
     return 0;
 }
